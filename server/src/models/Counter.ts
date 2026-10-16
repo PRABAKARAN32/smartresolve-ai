@@ -11,7 +11,7 @@ export async function nextPublicId(): Promise<string> {
   const c = await Counter.findOneAndUpdate(
     { _id: "issue" },
     { $inc: { seq: 1 } },
-    { upsert: true, new: true },
+    { upsert: true, returnDocument: "after" },
   );
   if (!c) throw new Error("Could not generate issue ID");
   return `SR-${String(c.seq).padStart(6, "0")}`;

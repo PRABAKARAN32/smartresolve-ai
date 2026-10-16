@@ -4,6 +4,7 @@ import cors from "cors";
 import mongoose from "mongoose";
 import { authRouter, meRouter } from "./routes/auth";
 import { errorHandler, notFound } from "./middleware/error";
+import { issuesRouter } from "./routes/issues";
 
 export function createApp(corsOrigins: string[] = []) {
   const app = express();
@@ -12,6 +13,9 @@ export function createApp(corsOrigins: string[] = []) {
   app.use(helmet());
   app.use(cors({ origin: corsOrigins }));
   app.use(express.json({ limit: "10kb" }));
+  app.use("/auth", authRouter);
+  app.use("/me", meRouter);
+  app.use("/issues", issuesRouter);
 
   app.get("/health", (_req: Request, res: Response) => {
     const dbUp = mongoose.connection.readyState === 1;
