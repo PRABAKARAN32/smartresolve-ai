@@ -11,6 +11,8 @@ import { detectEmergency } from "../domain/emergency";
 import { canViewIssue } from "../domain/access";
 import { logActivity } from "../services/activity";
 import { HttpError, asyncHandler, parseObjectId } from "../utils/errors";
+import { classify, suggestionLabel, MODEL_VERSION } from "../ml/classifier";
+import type { DepartmentName } from "../models/Department";
 
 // strictObject: reporterId, status, priority etc. sent by a client are rejected.
 // Those fields are decided by the server only.
@@ -94,14 +96,16 @@ issuesRouter.post(
       hazardFlag: input.hazardFlag,
     });
 
+    const pred = classify(`${input.title}. ${input.description}`);
+
     const issue = await Issue.create({
       publicId: await nextPublicId(),
       reporterId: user.id, // from the token, never from the request body
       ...input,
       status: "OPEN",
-      routingState: "NEEDS_REVIEW",
-      predictedDepartment: null,
-      predictionConfidence: null,
+      routingState: pred.routingState,
+      predictedDepartment: pred.department as DepartmentName | null,
+      predictionConfidence: pred.confidence,
       priority: pr.priority,
       priorityScore: pr.score,
       priorityFactors: pr.factors,
@@ -119,9 +123,30 @@ issuesRouter.post(
       action: "PRIORITY_RECOMMENDED",
       after: { priority: pr.priority, score: pr.score, factors: pr.factors },
     });
+    await logActivity({
+      issueId: issue._id,
+      actorId: null,
+      action: "DEPARTMENT_PREDICTED",
+      after: {
+        department: pred.department,
+        confidence: pred.confidence,
+        routingState: pred.routingState,
+        probabilities: pred.probabilities,
+        reason: pred.reason,
+        modelVersion: MODEL_VERSION,
+      },
+    });
 
     res.status(201).json({
       issue: toIssueView(issue),
+      prediction: {
+        label: suggestionLabel(pred),
+        department: pred.department,
+        confidence: pred.confidence,
+        routingState: pred.routingState,
+        reason: pred.reason,
+        probabilities: pred.probabilities,
+      },
       emergencyGuidance: detectEmergency(
         `${input.title} ${input.description}`,
         input.hazardFlag,

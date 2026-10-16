@@ -1,0 +1,92 @@
+# SYNTHETIC DATA: fictional complaints written for the SmartResolve AI demo. No real student or staff records.
+text,label,split
+The projector in seminar hall B will not turn on,IT Support,train
+My laptop cannot connect to the campus Wi-Fi network,IT Support,train
+Cannot log in to the student portal after resetting my password,IT Support,train
+Computers in the programming lab keep freezing during practicals,IT Support,train
+Need Python installed on the machines in lab 3,IT Support,train
+The internet is extremely slow in the library reading area,IT Support,train
+Printer in the computer centre is not responding to print jobs,IT Support,train
+Software license for MATLAB has expired on lab systems,IT Support,train
+Email account is locked and I cannot access my inbox,IT Support,train
+The smart board in classroom 5 shows no display signal,IT Support,train
+Keyboard and mouse on desktop 14 are not working,IT Support,train
+VPN connection to the college server keeps dropping,IT Support,train
+Online exam portal shows an error when I submit answers,IT Support,train
+Network cable in the staff room is loose and the connection is lost,IT Support,train
+Wireless access point near the canteen has no signal,IT Support,train
+Antivirus keeps blocking our project software on the lab PCs,IT Support,train
+The projector remote is missing and the HDMI port is not detected,IT Support,train
+Learning management system is down and assignments will not upload,IT Support,train
+Computer in the faculty office will not boot and shows a blue screen,IT Support,train
+Zoom and Teams are not installed on the new classroom desktop,IT Support,train
+Wifi signal drops every few minutes in the hostel common room,IT Support,test
+Video conferencing camera is not detected on the seminar room computer,IT Support,test
+I forgot my ERP password and the reset link never arrives,IT Support,test
+Server for the department website is returning a 500 error,IT Support,test
+Lab systems are very slow and take ten minutes to start up,IT Support,test
+Cannot access the digital library journals from my laptop off campus,IT Support,test
+Projector displays a pink tint and flickers during lectures,IT Support,test
+Scanner software is missing from the office computer,IT Support,test
+Our department shared drive is full and files cannot be saved,IT Support,test
+Browser shows a certificate warning on the attendance website,IT Support,test
+Water is leaking from the ceiling in the second floor corridor,Facilities,train
+Tube lights in classroom 12 are not working,Facilities,train
+The tap in the boys washroom is broken and water keeps running,Facilities,train
+Several benches in the lecture hall have broken legs,Facilities,train
+The ceiling fan in the staff room makes loud noise and wobbles,Facilities,train
+Drinking water cooler on the ground floor is not cooling,Facilities,train
+Door lock of the chemistry storeroom is jammed,Facilities,train
+Window glass in the library is cracked,Facilities,train
+Overflowing drain behind the canteen has a bad smell,Facilities,train
+Air conditioner in the seminar hall is not working,Facilities,train
+The staircase handrail is loose near the main entrance,Facilities,train
+Corridor lights are flickering in the hostel block,Facilities,train
+Whiteboard in room 301 is falling off the wall,Facilities,train
+Garbage has not been collected from the campus bins for three days,Facilities,train
+Lift in the science block is stuck between floors,Facilities,train
+Roof leakage during rain is damaging the notice board area,Facilities,train
+Broken desks need replacement in the examination hall,Facilities,train
+Washroom floor is wet and slippery with no cleaning,Facilities,train
+Gate hinge at the parking entrance is rusted and needs repair,Facilities,train
+Paint is peeling off the walls in the girls hostel corridor,Facilities,train
+Water seeping through the wall near the auditorium stage,Facilities,test
+Light bulbs in the parking area are fused and it is dark at night,Facilities,test
+Toilet flush is not working on the third floor,Facilities,test
+Classroom chairs are damaged and some are missing,Facilities,test
+The exhaust fan in the lab is stuck and not rotating,Facilities,test
+Pipe burst near the hostel bathroom and the floor is flooded,Facilities,test
+Broken tiles in the main block lobby are a tripping risk,Facilities,test
+The water purifier in the library needs its filter changed,Facilities,test
+Lamp post at the main gate has fallen after the storm,Facilities,test
+Cupboard doors in the staff room are hanging off their hinges,Facilities,test
+I need a replacement student ID card because I lost mine,Administration,train
+Please issue a bonafide certificate for my scholarship application,Administration,train
+Classroom allocation for the fourth year seminar is clashing with another class,Administration,train
+Request for a transfer certificate and mark sheet copy,Administration,train
+My name is spelled wrongly on my ID card and needs correction,Administration,train
+Need a no objection letter for an industrial visit,Administration,train
+Fee receipt for the last semester is missing from my records,Administration,train
+Request to change my elective subject in the registration records,Administration,train
+Hall ticket has not been issued even though fees are paid,Administration,train
+Need a recommendation letter from the office for my internship,Administration,train
+Attendance records for March show incorrect entries,Administration,train
+Please allot a larger room for the guest lecture next Friday,Administration,train
+Application for a duplicate degree certificate,Administration,train
+Library membership card needs to be renewed through the office,Administration,train
+Scholarship disbursement status is not updated in the student records,Administration,train
+Request for a course completion letter for a visa application,Administration,train
+Bus pass application is pending with the transport office,Administration,train
+Timetable for the second year has not been published by the department office,Administration,train
+Need permission letter to conduct a cultural event in the auditorium,Administration,train
+Hostel admission letter has not been issued yet,Administration,train
+My ID card stopped scanning at the gate and must be reissued,Administration,test
+Please provide a letter confirming that I studied here for the loan application,Administration,test
+Exam room allocation list has not been displayed on the notice board,Administration,test
+Request to update my phone number and address in student records,Administration,test
+Need an attested copy of my marksheet for a job application,Administration,test
+The date of birth on my certificate does not match the college records,Administration,test
+Request a venue booking letter for the annual symposium,Administration,test
+Migration certificate application is pending for two weeks,Administration,test
+I paid the exam fee but the office has no record of it,Administration,test
+Please correct the roll number in the semester results,Administration,test

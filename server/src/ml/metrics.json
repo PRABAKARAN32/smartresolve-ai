@@ -1,0 +1,133 @@
+{
+  "modelVersion": "nb-61362fe3",
+  "datasetRevision": "61362fe3",
+  "trainedAt": "2026-10-16T08:59:39.688Z",
+  "trainExamples": 60,
+  "testExamples": 30,
+  "accuracy": 0.6,
+  "routedToReviewOnTest": 10,
+  "perClass": [
+    {
+      "class": "Administration",
+      "precision": 0.8333333333333334,
+      "recall": 0.5,
+      "f1": 0.625,
+      "support": 10
+    },
+    {
+      "class": "Facilities",
+      "precision": 1,
+      "recall": 0.6,
+      "f1": 0.7499999999999999,
+      "support": 10
+    },
+    {
+      "class": "IT Support",
+      "precision": 0.7777777777777778,
+      "recall": 0.7,
+      "f1": 0.7368421052631577,
+      "support": 10
+    }
+  ],
+  "confusionMatrix": {
+    "Administration": {
+      "Administration": 5,
+      "Facilities": 0,
+      "IT Support": 1,
+      "(none)": 4
+    },
+    "Facilities": {
+      "Administration": 0,
+      "Facilities": 6,
+      "IT Support": 1,
+      "(none)": 3
+    },
+    "IT Support": {
+      "Administration": 1,
+      "Facilities": 0,
+      "IT Support": 7,
+      "(none)": 2
+    }
+  },
+  "mistakes": [
+    {
+      "text": "I forgot my ERP password and the reset link never arrives",
+      "actual": "IT Support",
+      "predicted": "(none)",
+      "confidence": 0
+    },
+    {
+      "text": "Our department shared drive is full and files cannot be saved",
+      "actual": "IT Support",
+      "predicted": "(none)",
+      "confidence": 0
+    },
+    {
+      "text": "Browser shows a certificate warning on the attendance website",
+      "actual": "IT Support",
+      "predicted": "Administration",
+      "confidence": 1
+    },
+    {
+      "text": "Toilet flush is not working on the third floor",
+      "actual": "Facilities",
+      "predicted": "(none)",
+      "confidence": 0
+    },
+    {
+      "text": "Classroom chairs are damaged and some are missing",
+      "actual": "Facilities",
+      "predicted": "IT Support",
+      "confidence": 0.622
+    },
+    {
+      "text": "The water purifier in the library needs its filter changed",
+      "actual": "Facilities",
+      "predicted": "(none)",
+      "confidence": 0
+    },
+    {
+      "text": "Lamp post at the main gate has fallen after the storm",
+      "actual": "Facilities",
+      "predicted": "(none)",
+      "confidence": 0
+    },
+    {
+      "text": "Please provide a letter confirming that I studied here for the loan application",
+      "actual": "Administration",
+      "predicted": "(none)",
+      "confidence": 0
+    },
+    {
+      "text": "Exam room allocation list has not been displayed on the notice board",
+      "actual": "Administration",
+      "predicted": "IT Support",
+      "confidence": 0.9934
+    },
+    {
+      "text": "Request to update my phone number and address in student records",
+      "actual": "Administration",
+      "predicted": "(none)",
+      "confidence": 0
+    },
+    {
+      "text": "Request a venue booking letter for the annual symposium",
+      "actual": "Administration",
+      "predicted": "(none)",
+      "confidence": 0
+    },
+    {
+      "text": "Please correct the roll number in the semester results",
+      "actual": "Administration",
+      "predicted": "(none)",
+      "confidence": 0
+    }
+  ],
+  "possibleLeaks": [],
+  "params": {
+    "minConfidence": 0.65,
+    "minMargin": 0.15,
+    "minKnownTokens": 3,
+    "alpha": 1
+  }
+}
