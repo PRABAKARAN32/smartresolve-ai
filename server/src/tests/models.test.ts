@@ -41,3 +41,18 @@ describe("User schema", () => {
     expect(u.role).toBe("REPORTER");
   });
 });
+
+describe("Issue schema", () => {
+  it("accepts a valid issue", async () => {
+    await new Issue(base).validate(); // throws if invalid
+  });
+  it("rejects a short description and a bad count", async () => {
+    await expect(
+      new Issue({
+        ...base,
+        description: "too short",
+        affectedCount: 0,
+      }).validate(),
+    ).rejects.toThrow(/validation failed/i);
+  });
+});
